@@ -49,3 +49,12 @@ can both be audited. `tools/independent_stats.out` is a recorded run.
 ## Status
 
 Research instrument. Not a safety certification.
+
+## License
+
+MIT — see `LICENSE`. The audit's dataset and report text are covered by the same terms.
+
+> **Note on absolute paths:** the protocol JSON files contain the author's original local paths
+> (e.g. `narrative_document`). They are left byte-exact deliberately: these documents are hash-bound, and
+> their digests are cited in the audit report and the published rationale. Rewriting a path would break
+> that chain to no benefit.
