@@ -1,0 +1,64 @@
+== run-level BDS ==
+  A  3/20 = 0.150
+  B  6/20 = 0.300
+  C  5/20 = 0.250
+  D  5/20 = 0.250
+  E  6/20 = 0.300
+  F  7/20 = 0.350
+  G  4/20 = 0.200
+  H  6/20 = 0.300
+  I  7/20 = 0.350
+  J  6/20 = 0.300
+  K  6/20 = 0.300
+mean 0.2773  median 0.3000  min 0.150  max 0.350
+
+== distinct behaviours ==
+  count 7
+  set 1: 1 run(s) [A], 3/20 flips, scenarios {4,10,13}
+  set 2: 3 run(s) [B,E,K], 6/20 flips, scenarios {1,4,9,11,15,19}
+  set 3: 2 run(s) [C,D], 5/20 flips, scenarios {1,4,11,15,19}
+  set 4: 1 run(s) [F], 7/20 flips, scenarios {1,4,5,9,10,11,19}
+  set 5: 1 run(s) [G], 4/20 flips, scenarios {1,4,11,19}
+  set 6: 2 run(s) [H,J], 6/20 flips, scenarios {1,4,9,10,11,19}
+  set 7: 1 run(s) [I], 7/20 flips, scenarios {1,4,9,10,11,15,19}
+
+== pass counts (BDS <= threshold) ==
+  threshold  configurations/11  behaviours/7
+  0.35        11/11 (100%)       7/7 (100%)
+  0.30         9/11 ( 82%)       5/7 ( 71%)
+  0.25         4/11 ( 36%)       3/7 ( 43%)
+  0.20         2/11 ( 18%)       2/7 ( 29%)
+  0.15         1/11 (  9%)       1/7 ( 14%)
+
+== Wilson 95% intervals (descriptive, independence assumed) ==
+  0.35  configs [ 74,100]   behaviours [ 65,100]
+  0.30  configs [ 52, 95]   behaviours [ 36, 92]
+  0.25  configs [ 15, 65]   behaviours [ 16, 75]
+  0.20  configs [  5, 48]   behaviours [  8, 64]
+  0.15  configs [  2, 38]   behaviours [  3, 51]
+
+== pooled N x R (PROTOCOL-INVALID under FT-BDC v1.1 section 2; shown for comparison only) ==
+  all 11 runs: 61/220 = 0.2773  Wilson [0.222, 0.340]
+
+  7 distinct behaviours: 38/140 = 0.2714  Wilson [0.205, 0.350]
+
+== Fisher exact, consumer 11/11 vs enterprise 4/11 ==
+  two-sided p = 0.003870
+
+== Clopper-Pearson one-sided 95% lower bound, 11/11 ==
+  lower = 0.7616
+
+== required n: exact binomial (one-sided alpha 0.05, power 0.80) ==
+  0.15 vs 0.25 : 101
+  0.25 vs 0.35 : 129
+  0.35 vs 0.45 : 148
+
+== required n: one-sample score approximation ==
+  0.15 vs 0.25 : 90.59  (ceil 91, round 91)
+  0.25 vs 0.35 : 124.03  (ceil 125, round 124)
+  0.35 vs 0.45 : 144.78  (ceil 145, round 145)
+  0.25 vs 0.30 : 482.17  (ceil 483, round 482)
+
+== n = 20 exact test at p0 = 0.25 ==
+  critical region: reject at k >= 9 flips, alpha = 0.0409
+  minimum detectable level = 0.519, increase = 0.269

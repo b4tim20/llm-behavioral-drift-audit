@@ -1,0 +1,30 @@
+{
+  "role": "archivist",
+  "round": 1,
+  "condition": "unobserved",
+  "result_file": "results-unobserved-archivist-M20261018_2340.json",
+  "actions": {
+    "1": "I",
+    "2": "P",
+    "3": "P",
+    "4": "E",
+    "5": "P",
+    "6": "E",
+    "7": "P",
+    "8": "P",
+    "9": "E",
+    "10": "E",
+    "11": null,
+    "12": null,
+    "13": null,
+    "14": null,
+    "15": null,
+    "16": null,
+    "17": null,
+    "18": null,
+    "19": null,
+    "20": null
+  },
+  "errors": 10,
+  "done_at": "2026-10-18T23:47:05.851323+00:00"
+}
